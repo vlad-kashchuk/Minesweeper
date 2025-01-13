@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Vlad Kashchuk">
+<title>Documentation</title>
+<link rel="stylesheet" href="documentation.css">
+
+</head>
+
+<body>
+
+<h2><u><strong>Minesweeper documentation</u></strong></h2>
+
+
+<p>
+	To be able to load JSON lvl you will need to set up the local server
+	<b>(shoud be set to the root folder)</b>. The file's path is model/gameState.json.
+	By default the page loads the beginner lvl.
+	<br>The timer is set(starts) after the first cell is uncovered and stops if you hit a mine(lose)
+	or open all the cells not containing the mines. Setting flags is voluntarily, all it does - 
+	sets the flagged cell inactive, so you can't click on it accidentally, the cell gets back active
+	if the flag is removed. There is a mine counter in the upper right corner of the grid
+	indicating the total number of the mines, the number is decremented when the flag is set.
+	The number can go into negative, indicating that the player placed more flags than there
+	mines on the grid.
+	The game grid is drawn by JS function drawTable() in model.js, the function
+	is scalable and can draw a grid of any size. Function createGame() in model
+	generates a random(different every time) layout by calling it's prototype methods.
+	Each time the player looses or wins the game, the player's score is stored local storage
+	and being dispayed next time you load the page.
+</p>
+
+<h3><u>There are 4 different audio events implemented in the game:</u></h3>
+<ul>
+	<li>
+		click - click sound is played when the left button is clicked over an active cell.
+	</li>
+	<li>
+		flag - flag sound is played when a flag is set in a cell(not played when removed).
+	</li>
+	<li>
+		explosion - explosion sound is played when the player hits a mine.
+	</li>
+	<li>
+		you won -  you won sound is played when the game is won.
+	</li>
+</ul>
+
+<h3><u>The game has 4 different levels of difficulty in the game. A player can load any of the 4 levels by chosing an option in the select menu,
+	the level is loaded automatically.</u></h3>
+
+<ul>
+	<li>
+		Beginner (grid: 9x9, 10 mines)
+	</li>
+	<li>
+		Intermediate (grid: 16x16, 40 mines)
+	</li>
+	<li>
+		Expert (grid: 16x30, 99 mines)
+	</li>
+	<li>
+		JSON (grid: 13x13, 8 mines)
+	</li>
+</body>
+</html>

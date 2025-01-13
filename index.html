@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Vlad Kashchuk">
+<title>Minesweeper</title>
+<link rel="stylesheet" href = "game.css">
+<script src="view/view.js"></script>
+<script src="model/model.js"></script>
+</head>
+
+<body onload="setDifficulty();" class="gamePg">
+<h1><b>MINESWEEPER</b></h1>
+
+Time: <div id = 'timer' >0</div>
+Mines: <div id = 'minesLeft'></div>
+
+
+
+
+
+<div id="grid">
+</div>
+<br>
+
+<label for="difficulty">Difficulty</label>
+<select id="difficulty" onchange = "setDifficulty(event)">
+    <option value="beginner" selected>beginner</option>
+    <option value="intermediate">intermediate</option>
+    <option value="expert">expert</option>
+    <option value="json">JSON game state</option>
+</select>
+<br>
+<a href="documentation.html"> Documentation(MUST READ!)</a>
+<br>
+<div id="history"></div>
+
+<audio id="click">
+    <source src="view/click.wav" type="audio/wav">
+    <source src="view/click.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<audio id="flag">
+    <source src="view/set_flag.wav" type="audio/wav">
+    <source src="view/set_flag.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<audio id="explosion">
+    <source src="view/explosion.wav" type="audio/wav">
+    <source src="view/explosion.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<audio id="won">
+    <source src="view/won.wav" type="audio/wav">
+    <source src="view/won.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+
+
+</body>
+</html>

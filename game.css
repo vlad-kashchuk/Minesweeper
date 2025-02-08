@@ -1,0 +1,55 @@
+/* Vlad Kashchuk */
+* {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+body {
+    background: rgb(0, 0, 0);
+}
+
+table {
+    border: 5px solid rgb(95, 159, 189);
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+tr, td {
+    border: 2px solid rgb(211, 211, 211);
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+}
+
+img {
+    height: 26px;
+    width: 26px;
+}
+
+input, button, select {color: black;}
+
+a {
+    font-size: 1.2em;
+    color: rgb(73, 95, 191);
+}
+
+td:hover {
+    border-color: rgb(95, 94, 94);
+}
+
+.heighlight {
+    background-color: rgb(206, 206, 206);
+    border: 1px;
+}
+
+
+#timer {
+    display: inline;
+    margin-right: 10em;
+}
+
+#minesLeft {
+    display: inline;
+}
+

@@ -1,2 +1,2 @@
 # Minesweeper
-My crappy unfinished Minesweeper game
+Minesweeper game I did for WebDev class
